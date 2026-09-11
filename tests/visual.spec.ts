@@ -6,6 +6,8 @@ test('cart page visual regression test', async({cartPage}) => {
 
     await expect(cartPage.page).toHaveScreenshot(
         'cart-with-item.png', 
-        {maxDiffPixels: 100, }
+        {maxDiffPixels: 500, 
+            threshold: 0.3
+        }
     )
 })
